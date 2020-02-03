@@ -7,7 +7,7 @@
     "start": "node app.js",
     "dev": "SECRET_SESSION=topsecret MAIL_USER=sportmeet.ironhack@gmail.com MAIL_PASS=CarlosJeremy321 NODE_ENV=dev nodemon -e hbs,js,css app.js",
     "seeds": "node ./bin/seeds",
-    "seedsDev": "NODE_ENV=dev node ./bin/seeds"
+    "seedsDev": "NODE_ENV=dev nodemon ./bin/seeds"
   },
   "author": "",
   "license": "ISC",
