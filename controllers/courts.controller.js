@@ -1,8 +1,3 @@
-/* TODO:
-    - add
-    - create
-*/
-
 const createError = require('http-errors');
 const Court = require('../models/court.model')
 const Club = require('../models/users/club.model')

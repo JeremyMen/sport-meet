@@ -2,6 +2,7 @@
 
 //Node.js module. It is a MongoDB object modeling tool designed to work in an asynchronous environment
 const mongoose = require('mongoose')
+require('dotenv').config()
 
 //mongoose connection
 let mongodbConnection = (process.env.NODE_ENV === 'dev') ? 'mongodb://localhost:27017/SportMeet' : process.env.MONGODB_URI
