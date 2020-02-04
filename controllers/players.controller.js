@@ -1,19 +1,6 @@
-/* TODO:
-    - new √
-    - create √
-    - validate √
-    - login √
-    - doLogin √
-    - logout √
-    - profile √
-    - add sport
-    - new request
-*/
-
 const Player = require('../models/users/player.model')
 const Sport = require('../models/sport.model')
 const mongoose = require('mongoose');
-
 const mailer = require('../config/mailer.config');
 
 module.exports.new = (_, res) => {

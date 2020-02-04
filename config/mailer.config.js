@@ -1,6 +1,7 @@
 const nodemailer = require('nodemailer');
+require('dotenv').config()
 
-const APP_HOST = (process.env.NODE_ENV === 'devMailer') ? 'http://localhost:3000' : process.env.APP_HOST
+const APP_HOST = (process.env.NODE_ENV === 'dev') ? 'http://localhost:3000' : process.env.APP_HOST
 
 const user = process.env.MAIL_USER
 const pass = process.env.MAIL_PASS

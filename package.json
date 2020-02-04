@@ -5,9 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "NODE_ENV=dev nodemon -e hbs,js,css app.js",
-    "seeds": "node ./bin/seeds",
-    "seedsDev": "node ./bin/seeds"
+    "dev": "nodemon app.js",
+    "seeds": "node ./bin/seeds"
   },
   "author": "",
   "license": "ISC",

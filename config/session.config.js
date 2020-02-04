@@ -10,6 +10,8 @@ const uuid = require('uuid/v4')
 
 const mongoose = require('mongoose')
 
+require('dotenv').config()
+
 //if "npm run dev", it will create an ID
 let sessionSecret = (!process.env.SECRET_SESSION && process.env.NODE_ENV === 'dev') ?  uuid() : process.env.SECRET_SESSION
 
