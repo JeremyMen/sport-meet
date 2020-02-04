@@ -7,7 +7,7 @@ require('dotenv').config()
 //mongoose connection
 let mongodbConnection = (process.env.NODE_ENV === 'dev') ? 'mongodb://localhost:27017/SportMeet' : process.env.MONGODB_URI
 
-mongoose.connect(mongodbConnection)
+mongoose.connect(mongodbConnection, { useNewUrlParser: true })
     .then(() => console.info(`Successfully connected to the database ${mongodbConnection}`))
     .catch(error => console.error(`An error ocurred trying to connect to de database ${mongodbConnection}`, error))
 

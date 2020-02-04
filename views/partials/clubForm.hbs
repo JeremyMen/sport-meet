@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-md-12 login-from-row">
     <label>Add a club:</label>
-    <select name="club">
+    <select name="club" class="mw-100">
       {{#if clubRequest}}  
         <option style="color: #007C9B" selected="true" name="{{clubRequest.name}}" value="{{clubRequest.id}}" id="{{clubRequest.id}}">{{clubRequest.name}}</option>
       {{/if}} 

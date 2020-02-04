@@ -14,8 +14,8 @@ module.exports.new = (_, res) => {
 }
 
 module.exports.create = (req, res, next) => {
-  const photo = req.file.url
-  const imgName = req.file.originalname
+  // const photo = 
+  // const imgName = req.file.originalname
 
   const user = new Club({
     name: req.body.name,
@@ -25,8 +25,8 @@ module.exports.create = (req, res, next) => {
     password: req.body.password,
     openingTime: Number((req.body.openingTime).slice(0,2)),
     closingTime: Number((req.body.closingTime).slice(0,2)),
-    photo,
-    imgName
+    photo: req.file ? req.file.url : undefined,
+    imgName: req.file ? req.file.originalname : undefined
   })
 
   user.save()

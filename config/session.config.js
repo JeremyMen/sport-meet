@@ -13,12 +13,12 @@ const mongoose = require('mongoose')
 require('dotenv').config()
 
 //if "npm run dev", it will create an ID
-let sessionSecret = (!process.env.SECRET_SESSION && process.env.NODE_ENV === 'dev') ?  uuid() : process.env.SECRET_SESSION
+// let sessionSecret = (!process.env.SECRET_SESSION && process.env.NODE_ENV === 'dev') ?  uuid() : process.env.SECRET_SESSION
 
-if (!sessionSecret) throw new Error('Env var SECRET_SESSION not found or invalid')
+// if (!sessionSecret) throw new Error('Env var SECRET_SESSION not found or invalid')
 
 module.exports = session({
-  secret: sessionSecret,
+  secret: process.env.SECRET_SESSION,
   resave: true,
   saveUninitialized: true,
   cookie: { 
